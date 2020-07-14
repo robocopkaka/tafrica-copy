@@ -10,10 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_13_160753) do
+ActiveRecord::Schema.define(version: 2020_07_14_131656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+# Could not dump table "events" because of following StandardError
+#   Unknown type 'types' for column 'event_type'
 
   create_table "users", force: :cascade do |t|
     t.string "name", default: "", null: false
