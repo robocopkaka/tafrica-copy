@@ -1,0 +1,15 @@
+<div class="buttons">
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_url, method: :delete do  %>
+      <button class="btn btn-light">Logout</button>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_url do %>
+      <button class="btn btn-light">Login</button>
+    <% end %>
+
+    <%= link_to new_user_registration_url do %>
+      <button class="btn btn-light">Signup</button>
+    <% end %>
+  <% end%>
+</div>

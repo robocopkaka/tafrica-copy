@@ -1,0 +1,62 @@
+#login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 4.375rem);
+  background-color: #111118;
+  width: 100vw;
+
+  #login-form {
+    background-color: #FFFFFF;
+    border-radius: px-to-rem(8px);
+    padding-top: px-to-rem(20px);
+    max-height: 60vh;
+    height: auto;
+    width: 40vw;
+
+    label {
+      float: left;
+      font-weight: 500;
+    }
+    .field {
+      padding: 0 px-to-rem(20px) px-to-rem(10px) px-to-rem(20px);
+    }
+
+    .form-control:focus {
+      border-color: #4A2545;
+    }
+
+    .button-group {
+      padding: px-to-rem(20px) px-to-rem(20px) 0 px-to-rem(20px);
+      .btn {
+        background-color: #4A2545;
+        color: #FFFFFF;
+        border-radius: 8px;
+      }
+    }
+
+    #shared-links {
+      padding: px-to-rem(10px) px-to-rem(20px);
+      a {
+        color: #4A2545;
+        font-weight: bold;
+      }
+
+      #signup-helper {
+        font-size: px-to-rem(15px);
+      }
+    }
+
+    #error_explanation {
+      h2 {
+        font-size: px-to-rem(15px);
+        font-weight: bold;
+      }
+
+      ul {
+        font-size: px-to-rem(15px);
+        color: darkred;
+      }
+    }
+  }
+}
