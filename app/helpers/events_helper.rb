@@ -14,4 +14,8 @@ module EventsHelper
   def paid_event(event)
     event.paid ? "Yes" : "No"
   end
+
+  def active_text(event)
+    event.active ? "Make Inactive" : "Make active"
+  end
 end
