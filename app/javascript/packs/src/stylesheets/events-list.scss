@@ -1,0 +1,81 @@
+#events-list {
+  max-height: calc(100vh - 4.375rem);
+  height: calc(100vh - 4.375rem);
+  position: relative;
+  #empty-events {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: px-to-rem(50px);
+  }
+  #events-list-header {
+    text-align: center;
+    font-weight: bold;
+  }
+  .container {
+    padding-bottom: px-to-rem(40px);
+    .row {
+      #event-card {
+        padding: px-to-rem(20px) 0;
+
+        .card{
+          max-height: 65vh;
+          .card-img-top {
+            height: 25vh;
+          }
+          .card-body {
+            max-height: 43vh;
+            height: 38vh;
+            line-height: 1rem;
+            .card-title {
+              font-weight: bold;
+              text-align: center;
+            }
+
+            #description {
+              font-weight: lighter;
+            }
+
+            .category-header {
+              font-weight: bold;
+            }
+
+            .event-times {
+              .time-value {
+                font-size: px-to-rem(15px);
+                font-weight: 300;
+              }
+            }
+
+            .btn-primary {
+              background-color: #4A2545;
+            }
+          }
+        }
+      }
+
+      #pagination-links {
+        margin: 0 auto;
+        .pagination {
+          .page-item {
+            .page-link {
+              color: #4A2545;
+            }
+          }
+          .page-item.active {
+            .page-link {
+              background-color: #4A2545;
+              color: #F7F7F7;
+            }
+          }
+          .page-item.disabled {
+            .page-link {
+              color: #6c757d;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,6 +14,11 @@
     height: auto;
     width: 40vw;
 
+    #login-header {
+      font-size: px-to-rem(30px);
+      text-align: center;
+    }
+
     label {
       float: left;
       font-weight: 500;

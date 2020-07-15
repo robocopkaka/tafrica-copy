@@ -1,0 +1,13 @@
+@import "mixins/event-form";
+#new-event {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 4.375rem);
+  background-color: #111118;
+  width: 100vw;
+
+  @include event-form;
+}
+
+
