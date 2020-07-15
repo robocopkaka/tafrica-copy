@@ -26,6 +26,11 @@ class EventsController < ApplicationController
     end
   end
 
+  def toggle_active
+    @event.toggle_active!
+    render :show
+  end
+
   def index
     @events = Event
                 .active
@@ -36,6 +41,9 @@ class EventsController < ApplicationController
   def show;end
 
   def destroy
+    if @event.image.attached?
+      @event.image.purge
+    end
     @event.destroy
     redirect_to :events
   end
