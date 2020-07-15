@@ -6,4 +6,8 @@ module EventsHelper
       ActionController::Base.helpers.asset_path('events_2.jpg')
     end
   end
+
+  def owned_by_user?(event)
+    current_user == event.user
+  end
 end

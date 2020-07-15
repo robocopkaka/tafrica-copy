@@ -6,6 +6,9 @@
     <% else %>
       <div class="row">
         <%= render @events %>
+        <div id="pagination-links">
+          <%= will_paginate @events, renderer: WillPaginate::ActionView::BootstrapLinkRenderer  %>
+        </div>
       </div>
     <% end %>
   </div>

@@ -1,2 +1,13 @@
-<h1>Events#edit</h1>
-<p>Find me in app/views/events/edit.html.erb</p>
+<div id="edit-event">
+  <%= form_for @event, html: { id: "event-form" } do |f| %>
+    <h2 id="new-event-header">Update <%= @event.name %></h2>
+
+    <%= render "shared/error_messages", resource: @event %>
+
+    <%= render "events/event_form", f: f %>
+
+    <div class="button-group">
+      <%= f.submit "Update", class: "btn" %>
+    </div>
+  <% end %>
+</div>
