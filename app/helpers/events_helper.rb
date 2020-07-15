@@ -10,4 +10,8 @@ module EventsHelper
   def owned_by_user?(event)
     current_user == event.user
   end
+
+  def paid_event(event)
+    event.paid ? "Yes" : "No"
+  end
 end
