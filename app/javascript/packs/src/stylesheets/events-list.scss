@@ -1,0 +1,53 @@
+#events-list {
+  position: relative;
+  #empty-events {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: px-to-rem(50px);
+  }
+  #events-list-header {
+    text-align: center;
+    font-weight: bold;
+  }
+  .row {
+    #event-card {
+      padding: px-to-rem(20px) 0;
+
+      .card{
+        max-height: 70vh;
+        .card-img-top {
+          height: 25vh;
+        }
+        .card-body {
+          max-height: 45vh;
+          height: 42vh;
+          .card-title {
+            font-weight: bold;
+            text-align: center;
+          }
+
+          #description {
+            font-weight: lighter;
+          }
+
+          .category-header {
+            font-weight: bold;
+          }
+
+          .event-times {
+            .time-value {
+              font-size: px-to-rem(15px);
+              font-weight: 300;
+            }
+          }
+
+          .btn-primary {
+            background-color: #4A2545;
+          }
+        }
+      }
+    }
+  }
+}

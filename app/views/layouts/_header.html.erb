@@ -16,6 +16,10 @@
             <%= link_to "Add Event", new_event_url, class: "nav-link" %>
           </li>
         <% end %>
+
+        <li class="nav-item">
+          <%= link_to "View Events", events_url, class: "nav-link" %>
+        </li>
       </ul>
       <%= render "layouts/authentication_buttons" %>
     </div>

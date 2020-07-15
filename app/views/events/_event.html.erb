@@ -1,0 +1,27 @@
+<div class="col-4">
+  <div id="event-card">
+    <div class="card" style="width: 18rem;">
+      <div id="event-image">
+        <%= image_tag event_image(event), alt: event.name, class: "card-img-top" %>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"><%= event.name %></h5>
+        <p class="card-text" id="description"><%= truncate(event.description, length: 40) %></p>
+        <p class="card-text event-times">
+          <span class="category-header">Starts at: </span>
+          <span class="time-value"><%= event.start_time.strftime("%F %R") %></span>
+        </p>
+        <p class="card-text event-times">
+          <span class="category-header">Ends at: </span>
+          <span class="time-value"><%= event.end_time.strftime("%F %R") %></span>
+        </p>
+
+        <p class="card-text">
+          <span class="category-header">Paid: </span>
+          <span>Yes (Placeholder)</span>
+        </p>
+        <%= link_to "Go to Event", event_path(event), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

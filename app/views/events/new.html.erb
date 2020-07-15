@@ -1,0 +1,40 @@
+<div id="new-event">
+  <%= form_for @event, html: { id: "new-event-form" } do |f| %>
+    <h2 id="new-event-header">Add new event</h2>
+
+    <%= render "shared/error_messages", resource: @event %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%=  f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description, autofus: true, autocomplete: "description", class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :address %>
+      <%=  f.text_field :address, autofocus: true, autocomplete: "address", class: "form-control" %>
+    </div>
+
+    <div id="field">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div><br/>
+
+    <div class="field event-time">
+      <%= f.label :start_time %>
+      <%= datetime_select :event, :start_time %>
+    </div>
+
+    <div class="field event-time">
+      <%= f.label :end_time %>
+      <%= datetime_select :event, :end_time %>
+    </div>
+
+    <div class="button-group">
+      <%= f.submit "Create", class: "btn" %>
+    </div>
+  <% end %>
+</div>
