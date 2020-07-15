@@ -18,7 +18,7 @@
 
         <p class="card-text">
           <span class="category-header">Paid: </span>
-          <span>Yes (Placeholder)</span>
+          <span><%= paid_event(event) %></span>
         </p>
         <%= link_to "Go to Event", event_path(event), class: "btn btn-primary" %>
       </div>
